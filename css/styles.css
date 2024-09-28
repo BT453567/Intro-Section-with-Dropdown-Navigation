@@ -414,7 +414,11 @@ body {
 
     .features-link-mobile[aria-expanded='true'] .nav-bar__arrow-down,
     .company-link-mobile[aria-expanded='true'] .nav-bar__arrow-down {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);  /* for Safari, iOS, Android */
+        -moz-transform: rotate(180deg);     /* for older Firefox */
+        -ms-transform: rotate(180deg);      /* for older Internet Explorer */
+        -o-transform: rotate(180deg);       /* for older Opera */
+        transform: rotate(180deg);          /* standard */
     }
 
 
