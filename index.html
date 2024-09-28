@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/main.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body id="body">
+
+  <div id="menuOverlay" class="overlay" aria-hidden="true"></div>
+
+  <header class="header flex">
+
+    <div class="nav-bar__logo-container">
+      <img class="nav-bar__logo" src="./assets/images/logo.svg" alt="snap logo">
+    </div>
+
+    <nav id="nav-bar" class="nav-bar flex space-between" aria-hidden="false">
+      <div class="nav-bar__left flex">
+        
+        <ul class="nav-bar__main-menu flex remove-default-ul">
+          <li>
+            <a id="features" class="nav-menu__features-link" href="#" aria-expanded="false">Features <img class="nav-bar__arrow-down" src="./assets/images/icon-arrow-down.svg"></a>
+            <div id="features-container" class="nav-bar__features-container">
+              <ul id="features-nav-bar" class="nav-bar__features-menu remove-default-ul flex column">
+                <li><a href=""><img src="./assets/images/icon-todo.svg">Todo List</a></li>
+                <li><a href=""><img src="./assets/images/icon-calendar.svg">Calendar</a></li>
+                <li><a href=""><img src="./assets/images/icon-reminders.svg">Reminders</a></li>
+                <li><a href=""><img src="./assets/images/icon-planning.svg">Planning</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a id="company" class="nav-menu__company-link" href="#" aria-expanded="false">Company <img class="nav-bar__arrow-down" src="./assets/images/icon-arrow-down.svg" alt=""></a>
+            <div id="company-container" class="nav-bar__company-container">
+              <ul id="company-nav-bar" class="nav-bar__company-menu remove-default-ul flex column">
+                <li><a href="">History</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-bar__right flex">
+        <button class="remove-default-button button button--text-only">Login</button>
+        <button class="remove-default-button button button--border">Register</button>
+      </div>
+    </nav>
+
+    <button id="menu-button" class="mobile-menu-button" aria-controls="nav-bar" aria-expanded="false">
+      <img class="menu-icon" src="./assets/images/icon-menu.svg" alt="menu icon">
+    </button>
+  </header>
+
+  <!-- Mobile Nav Bar -->
+
+  <nav id="nav-bar-mobile" class="nav-bar-mobile" aria-hidden="true">
+    <button id="menu-close-button" class="mobile-close-button remove-default-button" aria-controls="nav-bar" aria-expanded="true">
+      <img class="menu-icon" src="./assets/images/icon-close-menu.svg" alt="close icon">
+    </button>
+    <ul class="nav-bar__main-menu-mobile flex column remove-default-ul gap-mobile-menu">
+      <li>
+        <a id="features-mobile" class="features-link-mobile" href="#" aria-expanded="false">Features <img class="nav-bar__arrow-down" src="./assets/images/icon-arrow-down.svg"></a>
+        <div id="features-mobile-wrapper" class="features-mobile-wrapper">
+          <ul id="features-nav-bar-mobile" class="nav-bar__features-menu-mobile remove-default-ul flex column gap-mobile-sub-menu" data-mobile-menu-visible="false">
+            <li><a href=""><img src="./assets/images/icon-todo.svg">List</a></li>
+            <li><a href=""><img src="./assets/images/icon-calendar.svg">Calendar</a></li>
+            <li><a href=""><img src="./assets/images/icon-reminders.svg">Reminders</a></li>
+            <li><a href=""><img src="./assets/images/icon-planning.svg">Planning</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a id="company-mobile" class="company-link-mobile" href="#" aria-expanded="false">Company <img class="nav-bar__arrow-down" src="./assets/images/icon-arrow-down.svg" alt=""></a>
+        <div id="company-mobile-wrapper" class="company-mobile-wrapper">
+          <ul id="company-nav-bar-mobile" class="nav-bar__company-mobile remove-default-ul flex column gap-mobile-sub-menu" data-mobile-menu-visible="false">
+            <li><a href="">History</a></li>
+            <li><a href="">Our Team</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Careers</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu-buttons-wrapper">
+      <button class="remove-default-button button button--text-only">Login</button>
+      <button class="remove-default-button button button--border">Register</button>
+    </div>
+
+  </nav>
+
+  
+  <main class="make-remote__wrapper grid">
+    <div class="make-remote__left flex column">
+      <div class="make-remote__left-content-wrapper flex column">
+        <h1 class="main-heading"><span>Make</span>remote work</h1>
+        <p class="make-remote__blurb">Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+        <div>
+          <button class="button remove-default-button button--fill">Learn more</button>
+        </div>
+
+        
+      </div>
+      <div class="make-remote__left-logos-wrapper flex">
+        <div>
+          <img src="./assets/images/client-databiz.svg" alt="databiz logo">
+        </div>
+        <div>
+          <img src="./assets/images/client-audiophile.svg" alt="audiophile logo">
+        </div>
+        <div>
+          <img src="./assets/images/client-meet.svg" alt="meet logo">
+        </div>
+        <div>
+          <img src="./assets/images/client-maker.svg" alt="maker logo">
+        </div>
+      </div>
+      
+    </div>
+    <div class="make-remote__right">
+      <div class="make-remote__img-container">
+        <picture>
+          <source media="(max-width: 750px)" srcset="./assets/images/image-hero-mobile.png">
+          <img class="make-remote__img" src="./assets/images/image-hero-desktop.png" alt="">
+        </picture>
+        
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
