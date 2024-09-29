@@ -423,6 +423,11 @@ body {
     .button--border:active {
         border: 1px solid var(--almost-black);
     }
+
+    .button--fill:active {
+        background-color: white;
+        border: 1px solid var(--almost-black);
+    }
 }
 
 @media only screen and (max-width: 1024px) {
