@@ -162,6 +162,13 @@ body {
     margin-right: 0;
 }
 
+/* Features and Company menu */
+
+.nav-menu__features-link[aria-expanded='true'] .nav-bar__arrow-down,
+.nav-menu__company-link[aria-expanded='true'] .nav-bar__arrow-down {
+    transform: rotate(180deg);
+}
+
 .nav-bar__features-menu a,
 .nav-bar__company-menu a {
     color: var(--medium-gray);
@@ -401,25 +408,6 @@ body {
         transform: translateY(0);
     }
 
-    /* Features and Company menu */
-
-    .nav-menu__features-link[aria-expanded='true'] .nav-bar__arrow-down,
-    .nav-menu__company-link[aria-expanded='true'] .nav-bar__arrow-down {
-        transform: rotate(180deg);
-    }
-
-    /* Mobile */
-
-    .features-link-mobile[aria-expanded='true'] .nav-bar__arrow-down,
-    .company-link-mobile[aria-expanded='true'] .nav-bar__arrow-down {
-        -webkit-transform: rotate(180deg);  /* for Safari, iOS, Android */
-        -moz-transform: rotate(180deg);     /* for older Firefox */
-        -ms-transform: rotate(180deg);      /* for older Internet Explorer */
-        -o-transform: rotate(180deg);       /* for older Opera */
-        transform: rotate(180deg);          /* standard */
-    }
-
-
 }
 
 @media (hover:none) {
@@ -485,6 +473,13 @@ body {
     .mobile-menu-button[aria-expanded="true"] .close-icon {
         display: block;
     }
+
+
+    .features-link-mobile[aria-expanded='true'] .nav-bar__arrow-down,
+    .company-link-mobile[aria-expanded='true'] .nav-bar__arrow-down {
+        transform: rotate(180deg);
+    }
+  
 
     .nav-bar-mobile[aria-hidden="true"] {
         display: none;
